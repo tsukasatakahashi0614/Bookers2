@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+
 # Assuming you have not yet modified this file, each configuration option below
 # is set to its default value. Note that some are commented out while others
 # are not: uncommented lines are intended to protect your configuration from
@@ -14,7 +15,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '29262bf6ffca8fd2388053671a34500eb96e07bb1001e6e84e177133eaeafb71506a63c783bf335dadd7fd3366e53585b109a9fd27a8d468eb74a4fe642c09f8'
+  # config.secret_key = '4b522a060da3630ef3304e394ba344f33d98b97e7a1a0695fd2c5318775eefa80b3e1346700135f605ec84aac0c6b018b79ce806ba0eff86bf216800f9a580ee'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -46,7 +47,7 @@ Devise.setup do |config|
   # session. If you need permissions, you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
   # or not authentication should be aborted when the value is not present.
-  # config.authentication_keys = [:name]
+  config.authentication_keys = [:name]
 
   # Configure parameters from the request object used for authentication. Each entry
   # given should be a request method and it will automatically be passed to the
@@ -126,7 +127,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '1bd1da58eb6ae625b1a528e404468b2ed4042dff2df58fa885627d112eaf2370ced90d133f6cb2c20cf04673b5d1dd738935d6ebaeffe57b7047a7f51d874980'
+  # config.pepper = '8781b1db3f1c0256d8f6bd0365abfbfec63320a28a0b57dd94d0888557d1d191f5e974bc805aff44522e7b9b7bdfcfc516c9ae5eae9e3f462688e41d1449b271'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -308,4 +309,5 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+  # config.scoped_views = true
 end
